@@ -2,6 +2,6 @@
 
 <ul>
   <% @pages.each do |page| %>
-    <li><%= page.name %> | <a href="/preview<%= page.url %>">Preview</a></li>
+    <li><a href="/pages/<%= page.name %>"><%= page.name %></a> | <a href="/preview<%= page.url %>">Preview</a></li>
   <% end %>
 </ul>

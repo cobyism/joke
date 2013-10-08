@@ -1,0 +1,20 @@
+<h2>Editing Page</h2>
+
+<a href="/preview<%= @page.url %>">Preview Page</a>
+
+Site: <%= @page.site %>
+Pager: <%= @page.pager %>
+Name: <%= @page.name %>
+Ext: <%= @page.ext %>
+Basename: <%= @page.basename %>
+Data: <%= @page.data %>
+
+Content
+<textarea>
+  <%= @page.content %>
+</textarea>
+
+Output
+<textarea>
+  <%= @page.output %>
+</textarea>

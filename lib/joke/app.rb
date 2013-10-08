@@ -19,7 +19,13 @@ module Joke
         :baseurl => "/preview"
       }
       @site = Jekyll::Site.new(Jekyll.configuration(options))
-      @site.process
+      @rendered_site = @site.clone
+
+      # Properly build one instance of the site
+      @rendered_site.process
+
+      # Leave one version of the site unprocessed
+      @site.read
     end
 
     get '/' do
@@ -29,6 +35,11 @@ module Joke
     get '/pages' do
       @pages = @site.pages
       erb :pages
+    end
+
+    get '/pages/:name' do
+      @page = find_page(@site, params[:name])
+      erb :page
     end
 
     get '/posts' do

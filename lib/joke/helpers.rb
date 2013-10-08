@@ -15,5 +15,13 @@ module Joke
       end
     end
 
+    def find_page(site, name)
+      result = nil
+      site.pages.each do |page|
+        result = page if page.name == name
+      end
+      result
+    end
+
   end
 end

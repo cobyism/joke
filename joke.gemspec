@@ -73,8 +73,13 @@ Gem::Specification.new do |s|
     lib/joke/views/config.erb
     lib/joke/views/index.erb
     lib/joke/views/layout.erb
+    lib/joke/views/page.erb
     lib/joke/views/pages.erb
     lib/joke/views/posts.erb
+    test/source/_layouts/default.html
+    test/source/_posts/2013-01-01-test-post.md
+    test/source/_posts/2013-01-02-example-post.md
+    test/source/css/style.css
     test/source/index.html
     test/test_joke.rb
   ]

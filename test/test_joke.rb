@@ -21,6 +21,12 @@ class JokeTest < Test::Unit::TestCase
     assert last_response.body.include?("Pages")
   end
 
+  def test_page
+    get '/pages/index.html'
+    assert last_response.ok?
+    assert last_response.body.include? "Name: index.html"
+  end
+
   def test_posts
     get '/posts'
     assert last_response.ok?
