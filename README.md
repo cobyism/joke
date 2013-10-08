@@ -11,7 +11,7 @@ Joke lets you manage [Jekyll](http://jekyllrb.com) sites locally like a CMS.
     cd your/jekyll/site
     joke
 
-Point your browser at <http://localhost:4001/>.
+Point your browser at <http://localhost:4000/>.
 
 ## License
 

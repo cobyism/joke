@@ -1,3 +1,7 @@
 <h2>Pages</h2>
 
-<%= @pages.inspect %>
+<ul>
+  <% @pages.each do |page| %>
+    <li><%= page.name %> | <a href="/preview<%= page.url %>">Preview</a></li>
+  <% end %>
+</ul>

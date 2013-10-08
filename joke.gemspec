@@ -63,16 +63,19 @@ Gem::Specification.new do |s|
     LICENSE
     README.md
     Rakefile
+    _config.yml
     bin/joke
     joke.gemspec
     lib/joke.rb
     lib/joke/app.rb
+    lib/joke/helpers.rb
     lib/joke/public/stylesheets/main.css
     lib/joke/views/config.erb
     lib/joke/views/index.erb
     lib/joke/views/layout.erb
     lib/joke/views/pages.erb
     lib/joke/views/posts.erb
+    test/source/index.html
     test/test_joke.rb
   ]
   # = MANIFEST =
