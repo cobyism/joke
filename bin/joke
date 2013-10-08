@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'joke'
+
+puts "Firing up the Joke server…"
+Joke::App.run!

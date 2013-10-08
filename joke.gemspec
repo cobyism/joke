@@ -1,5 +1,9 @@
 # Gemspec/Rakefile from https://github.com/mojombo/rakegem
 
+# -*- encoding: utf-8 -*-
+$:.push File.expand_path("../lib", __FILE__)
+require "joke/app"
+
 Gem::Specification.new do |s|
   s.specification_version = 2 if s.respond_to? :specification_version=
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
@@ -30,8 +34,8 @@ Gem::Specification.new do |s|
   s.require_paths = %w[lib]
 
   ## This sections is only necessary if you have C extensions.
-  s.require_paths << 'ext'
-  s.extensions = %w[ext/extconf.rb]
+  # s.require_paths << 'ext'
+  # s.extensions = %w[ext/extconf.rb]
 
   ## If your gem includes any executables, list them here.
   s.executables = ["joke"]
@@ -43,7 +47,8 @@ Gem::Specification.new do |s|
 
   ## List your runtime dependencies here. Runtime dependencies are those
   ## that are needed for an end user to actually USE your code.
-  # s.add_dependency('DEPNAME', [">= 1.1.0", "< 2.0.0"])
+  s.add_dependency('sinatra')
+  s.add_dependency('jekyll')
 
   ## List your development dependencies here. Development dependencies are
   ## those that are only needed during development
@@ -54,7 +59,16 @@ Gem::Specification.new do |s|
   ## THE MANIFEST COMMENTS, they are used as delimiters by the task.
   # = MANIFEST =
   s.files = %w[
-
+    LICENSE
+    README.md
+    Rakefile
+    bin/joke
+    joke.gemspec
+    lib/joke.rb
+    lib/joke/app.rb
+    lib/joke/public/stylesheets/main.css
+    lib/joke/views/index.erb
+    test/test_joke.rb
   ]
   # = MANIFEST =
 
