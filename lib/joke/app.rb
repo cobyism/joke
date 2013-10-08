@@ -10,11 +10,29 @@ module Joke
 
     set :public_folder, File.dirname(__FILE__) + '/public'
 
-    get '/' do
+    before do
       options = Jekyll.configuration(Hash.new)
       @site = Jekyll::Site.new(options)
       @site.process
+    end
+
+    get '/' do
       erb :index
+    end
+
+    get '/pages' do
+      @pages = @site.pages
+      erb :pages
+    end
+
+    get '/posts' do
+      @posts = @site.posts
+      erb :posts
+    end
+
+    get '/config' do
+      @config = @site.config
+      erb :config
     end
 
   end

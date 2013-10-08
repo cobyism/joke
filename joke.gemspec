@@ -28,6 +28,7 @@ Gem::Specification.new do |s|
   s.authors  = ["Coby Chapple"]
   s.email    = 'coby@github.com'
   s.homepage = 'https://github.com/cobyism/joke'
+  s.license  = 'MIT'
 
   ## This gets added to the $LOAD_PATH so that 'lib/NAME.rb' can be required as
   ## require 'NAME.rb' or'/lib/NAME/file.rb' can be as require 'NAME/file.rb'
@@ -67,7 +68,11 @@ Gem::Specification.new do |s|
     lib/joke.rb
     lib/joke/app.rb
     lib/joke/public/stylesheets/main.css
+    lib/joke/views/config.erb
     lib/joke/views/index.erb
+    lib/joke/views/layout.erb
+    lib/joke/views/pages.erb
+    lib/joke/views/posts.erb
     test/test_joke.rb
   ]
   # = MANIFEST =

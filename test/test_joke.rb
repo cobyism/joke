@@ -14,4 +14,23 @@ class JokeTest < Test::Unit::TestCase
     assert last_response.ok?
     assert last_response.body.include?("Joke")
   end
+
+  def test_pages
+    get '/pages'
+    assert last_response.ok?
+    assert last_response.body.include?("Pages")
+  end
+
+  def test_posts
+    get '/posts'
+    assert last_response.ok?
+    assert last_response.body.include?("Posts")
+  end
+
+  def test_config
+    get '/config'
+    assert last_response.ok?
+    assert last_response.body.include?("Configuration")
+  end
+
 end
