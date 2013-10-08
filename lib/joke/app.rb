@@ -1,3 +1,4 @@
+require 'jekyll'
 require 'sinatra'
 
 module Joke
@@ -10,6 +11,9 @@ module Joke
     set :public_folder, File.dirname(__FILE__) + '/public'
 
     get '/' do
+      options = Jekyll.configuration(Hash.new)
+      @site = Jekyll::Site.new(options)
+      @site.process
       erb :index
     end
 
