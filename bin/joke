@@ -3,17 +3,9 @@
 require 'joke'
 
 jekyll_artifacts = %w[ _config.yml _drafts _includes _layouts _posts ]
-looks_like_jekyll = false
-jekyll_artifacts.each do |artifact|
-  looks_like_jekyll = File.exists?(artifact) unless looks_like_jekyll
-end
-unless looks_like_jekyll
+unless jekyll_artifacts.any? { |artifact| File.exists?(artifact) }
   print "This doesn’t look like a Jekyll site. Are you sure you want to run joke? [y/N]: "
-  answer = gets
-  unless answer.downcase.chomp == "y"
-    puts "No worries. Later!"
-    exit
-  end
+  abort "No worries. Later!" unless gets.downcase.chomp == "y"
 end
 
 puts "Firing up the Joke server…"
