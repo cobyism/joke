@@ -2,7 +2,7 @@
 
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "joke/app"
+# require "joke/app"
 
 Gem::Specification.new do |s|
   s.specification_version = 2 if s.respond_to? :specification_version=
