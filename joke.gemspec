@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   ## the sub! line in the Rakefile
   s.name              = 'joke'
   s.version           = '0.0.1'
-  s.date              = '2013-10-08'
+  s.date              = '2013-11-17'
   s.rubyforge_project = 'joke'
 
   ## Make sure your summary is short. The description may be as long
@@ -61,6 +61,8 @@ Gem::Specification.new do |s|
   ## THE MANIFEST COMMENTS, they are used as delimiters by the task.
   # = MANIFEST =
   s.files = %w[
+    Gemfile
+    Gemfile.lock
     LICENSE
     README.md
     Rakefile
