@@ -1,10 +1,46 @@
 * {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  font-size: 1em;
 }
 
 html, body {
   font-family: "Helvetica Neue", Helvetica, arial, freesans, clean, sans-serif;
   margin: 0;
   padding: 0;
+  font-size:
+}
+
+.page {
+  background: #555;
+}
+
+.app-logo,
+.primary-nav,
+.primary-nav ul,
+.primary-nav li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.app-header {
+  border-top: 4px solid #fc0;
+  color: #ddd;
+}
+
+.app-header a {
+  text-decoration: none;
+  color: #eee;
+}
+
+.section-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.main .section-content {
+  background: #eee;
+  border-radius: 3px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }

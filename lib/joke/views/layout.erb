@@ -3,19 +3,23 @@
     <title>Joke</title>
     <link href="/stylesheets/main.css" rel="stylesheet" type="text/css">
   </head>
-  <body>
-    <header>
-      <h1>Joke</h1>
-      <nav>
-        <ul>
-          <li><a href="/pages">Pages</a></li>
-          <li><a href="/posts">Posts</a></li>
-          <li><a href="/config">Configuration</a></li>
-        </ul>
-      </nav>
+  <body class="page">
+    <header class="app-header">
+      <div class="section-content">
+        <h1 class="app-logo">Joke</h1>
+        <nav class="primary-nav">
+          <ul>
+            <li><a href="/pages">Pages</a></li>
+            <li><a href="/posts">Posts</a></li>
+            <li><a href="/config">Configuration</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <section class="main">
-      <%= yield %>
+      <div class="section-content">
+        <%= yield %>
+      </div>
     </section>
   </body>
 </html>
